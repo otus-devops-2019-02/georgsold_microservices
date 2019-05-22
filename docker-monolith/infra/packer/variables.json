@@ -1,0 +1,11 @@
+{
+ 
+    "project_id": "docker-241212",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_description": "Docker with preinstalled app",
+    "machine_type": "f1-micro",
+    "disk_type": "pd-standard",
+    "network": "default",
+    "tags": "puma-server"
+
+}

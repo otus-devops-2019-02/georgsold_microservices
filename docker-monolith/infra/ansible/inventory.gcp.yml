@@ -1,0 +1,13 @@
+---
+  plugin: gcp_compute
+  zones:
+    - europe-west1-b
+  projects:
+    - docker-000000
+  auth_kind: serviceaccount
+  service_account_file: ~/Downloads/docker-key.json
+  scopes:
+    - https://www.googleapis.com/auth/compute
+  filters: null
+  compose:
+    ansible_host: networkInterfaces[0].accessConfigs[0].natIP
