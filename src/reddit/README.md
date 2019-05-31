@@ -1,5 +1,6 @@
 # Monolith application
 
+
 ## Deploy using Capistrano
 
 #### Requirements for the target host:

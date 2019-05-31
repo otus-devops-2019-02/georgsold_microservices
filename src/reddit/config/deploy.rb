@@ -63,6 +63,7 @@ namespace :deploy do
     end
   end
 
+  
   before :starting,     :check_revision
   after  :finishing,    :cleanup
   after  :finishing,    :restart

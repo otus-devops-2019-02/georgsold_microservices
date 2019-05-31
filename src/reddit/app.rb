@@ -6,7 +6,6 @@ require 'mongo'
 require 'bcrypt'
 require './helpers'
 
-
 configure do
     db = Mongo::Client.new([ ENV['DATABASE_URL'] || '127.0.0.1:27017' ], database: 'user_posts', heartbeat_frequency: 2)
     set :mongo_db, db[:posts]

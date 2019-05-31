@@ -7,6 +7,7 @@ helpers do
     rescue BSON::ObjectId::Invalid
       nil
     end
+    
   end
 
   def document_by_id id
