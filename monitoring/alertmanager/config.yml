@@ -1,11 +1,11 @@
 
 global:
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  slack_api_url: 'https://hooks.slack.com/services/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'
 
-  route:
-    receiver: 'slack-notifications'
+route:
+  receiver: 'slack-notifications'
 
-  receivers:
-    - name: 'slack-notifications'
+receivers:
+- name: 'slack-notifications'
   slack_configs:
-    - channel: '#georgsold' 
+  - channel: '#pavel_tegletsov'
