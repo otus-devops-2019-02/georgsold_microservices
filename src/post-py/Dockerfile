@@ -3,7 +3,7 @@ FROM python:3.6.0-alpine AS build
 WORKDIR /app
 ADD . /app
 
-RUN apk add --no-cache build-base gcc
+RUN apk add --no-cache build-base gcc musl-dev
 
 RUN pip install -r /app/requirements.txt
 

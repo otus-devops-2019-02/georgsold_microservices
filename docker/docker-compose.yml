@@ -11,17 +11,37 @@ services:
         - comment_db
   ui:
     image: ${USER_NAME}/ui:${UI_V}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+
     ports:
       - ${PORT_NUM}:9292/tcp
+
     networks:
       - front_net
+    # logging:
+    #   driver: "fluentd"
+    #   options:
+    #     fluentd-address: localhost:24224
+    #     tag: service.ui  
   post:
     image: ${USER_NAME}/post:${POST_V}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+
     networks:
       - back_net
       - front_net
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
   comment:
     image: ${USER_NAME}/comment:${COMMENT_V}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+
     networks:
       - back_net
       - front_net
